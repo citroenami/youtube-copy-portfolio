@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Practice</title>
+  </head>
+  <!-- give height to body so that we can scroll.
+  add spacing to the body element so that fixed header
+  doesnt eclipse other elements this is best practice-->
+  <body style="
+    height: 2000px;
+    padding-top: 60px;
+    padding-left: 80px;
+  ">
+  <!-- position: fixed doesnt take up space on the page
+  its sort of floating. if we set left and right the
+  element will stretch.-->
+    <div style="
+      background-color: black;
+      color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 50px;
+    "
+    >header</div>
+    <div style="
+      background-color: green;
+      color: white;
+      position: fixed;
+      top: 50px;
+      left: 0;
+      bottom: 0;
+      width: 72px;
+    ">
+    sidebar
+      <div style="
+        position: absolute;
+        background-color: red;
+        color: white;
+        right: 0;
+        top: 0;
+      ">
+        X
+      </div>
+    </div>
+<!-- position fixed -> elements placed in the browser window
+     position absolute -> elements placed on the page *-->
+<!-- elements appear on top of the other when written below
+     unless we set its z-index value higher -->
+
+    <div style="
+      position: absolute;
+      background-color: red;
+      color: white;
+      left: 10px;
+      top: 10px;
+    ">
+      absolute
+    </div>
+
+  <!-- position: static; default it means that the element
+  positioned according to the normal flow of the document
+  margin-top: 60px; on div element coz fixed header covers
+  it up is not good practice because the layout can change
+  -->
+    <div style="
+        background-color: lightblue;
+        height: 200px;
+        width: 200px;
+        position: static;
+      ">div 1</div>
+    <div style="
+        background-color: lightpink;
+        height: 200px;
+        width: 200px;
+        position: relative;
+    ">
+      <div style="
+        position: absolute;
+        background-color: black;
+        color: white;
+        bottom: 10px;
+        right: 10px;
+      ">
+        5.00
+      </div>
+      div 2
+    </div>
+
+    <!--* when we scroll the browser window is not moving
+    so position:fixed elements dont move either
+    but the page does and so do position: absolute elements
+    with it.
+    when we say top: 10px to a fixed element its 10px from
+    the top of the window. if we do the same on an absolute
+    positioned element than its 10px from the top of the page
+    -->
+    <img style="
+      height: 300px;
+    "
+    src="../Screenshot2024-02-15_190142.png">
+  </body>
+</html>
