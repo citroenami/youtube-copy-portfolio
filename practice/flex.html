@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Practice</title>
+  </head>
+  <body style="padding-bottom: 1000px;">
+    <!-- when div turned into flex they become like 
+    inline-block elements taking up as much space as needed  -->
+    <div style="
+        display: flex;
+        flex-direction: row;
+      ">
+      <div style="background-color:
+      lightblue;">div 1 text</div>
+      <!-- when becoming taller stays vertically aligned -->
+      <div style="background-color:
+      lightpink;">div 2<p>text</p></div>
+    </div>
+
+    <div style="
+        display: flex;
+        flex-direction: row;
+        margin-top: 30px;
+      ">
+      <div style="
+        background-color:lightblue;
+        width: 100px;">100px</div>
+      <div style="
+        background-color:lightpink;
+        flex: 1;
+      ">flex1</div>
+    </div>
+
+    <div style="
+      display: flex;
+      flex-direction: row;
+      margin-top: 30px;
+    ">
+      <div style="
+        background-color:lightblue;
+        width: 100px;">100px</div>
+      <div style="
+        background-color:lightpink;
+        flex: 1;
+      ">flex1</div>
+      <div style="
+        background-color:lightblue;
+        flex: 2;
+      ">flex2</div>
+    </div>
+
+    <div style="
+      height: 70px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 30px;
+      border: 1px solid grey;
+    ">
+      <div style="
+        background-color:lightblue;
+        width: 100px;">100px</div>
+      <div style="
+        background-color:lightpink;
+        width: 100px;
+      ">100px</div>
+      <div style="
+        background-color:lightblue;
+        width: 100px;
+      ">100px</div>
+    </div>
+
+    <div style="
+      height: 70px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 30px;
+      border: 1px solid grey;
+    ">
+      <div style="
+        background-color:lightblue;
+        width: 100px;">100px</div>
+      <div style="
+        background-color:lightpink;
+        width: 100px;
+      ">100px</div>
+      <div style="
+        background-color:lightblue;
+        width: 100px;
+      ">100px</div>
+    </div>
+<!--  align-items: stretch; is the default value 
+      align-items: start; take up as much vertical space
+      as they need to -->
+    <div style="
+      height: 70px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 30px;
+      border: 1px solid grey;
+    ">
+      <div style="
+        background-color:lightblue;
+        width: 100px;">100px</div>
+      <div style="
+        background-color:lightpink;
+        width: 100px;
+      ">100px</div>
+      <div style="
+        background-color:lightblue;
+        width: 100px;
+      ">100px</div>
+    </div>
+  </body>
+</html>

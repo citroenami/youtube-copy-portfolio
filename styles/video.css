@@ -1,0 +1,198 @@
+main {
+  height: 1800px;
+}
+/* if we style text on parrent element it gets inherited to children(inner elements) */
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 15px;
+  row-gap: 40px;
+  /* font-family: Roboto, Arial, Helvetica, sans-serif; 
+  we go even further and put style to the whole body */
+}
+
+@media (max-width: 750px) {
+  .video-grid  {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1000px) {
+  .video-grid  {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1650px) {
+  .video-grid  {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 2000px) {
+  .video-grid  {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+.video-preview {
+/* when block element is in div it takes up whole line
+within div
+width: 300px; --> changed to 1fr
+display: inline-block; --> not necessary after applying
+nested layout
+vertical-align: top; --> in grid or flex we use other
+ways to manipulate alignment
+margin-right: 15px; --> create space with column gap 
+property instead
+*/
+}
+
+.thumbnail-row {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.thumbnail {
+   /* takes up 100% of 1fr*/
+  width: 100%;
+  /* shrinks image so it fits container 
+  object-fit: contain;
+  border: 2px solid red;
+  object-position: center;
+  */
+  /* causes element to take up entire line*/
+  /* display: block; <-- not necessary
+  when within a div and being a grid item*/
+}
+/* we put font-family on the entire grid so here its not gonna be necessary anymore 
+  it gets inherited */
+.video-time {
+  background-color: black;
+  color: white;
+  position: absolute;
+  bottom: 10px;
+  right: 8px;
+  /* font-family: Roboto, Arial, Helvetica, sans-serif; */
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px;
+  border-radius: 2px;
+}
+
+.video-info-grid {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+}
+
+/* divs by default have with of 100%*/
+.channel-picture {
+/*display: inline-block;
+  vertical-align: top;
+    width: 50px;
+  */
+  position: relative;
+}
+
+.channel-picture-tooltip {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: white;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0px 3px 8px 1px rgba(0,0,0,0.15);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s;
+}
+
+.channel-picture:hover .channel-picture-tooltip {
+  opacity: 1;
+}
+
+.picture-tooltip-container{
+  padding-left: 5px;
+  padding-right: 8px;
+}
+/* nowrap prevents line breaks at white spaces*/
+.info-tooltip-container {
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+.channel-author-name {
+  font-weight: 700;
+}
+
+.channel-subs {
+  color: rgb(96, 96, 96);
+  font-size: 13px;
+}
+
+.profile-picture {
+  /* images overflow by default meaning they try to
+  maintain original dimensions*/
+  width: 36px;
+  border-radius: 50px;
+}
+
+.video-info {
+  width: 200px;
+  display: inline-block;
+}
+
+.video-title {
+  margin-top: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+/* media querry has to be below original style or wont come into effect*/
+@media (min-width: 1000px) {
+  .video-title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.video-title-link {
+  text-decoration: none;
+  color: black;
+}
+
+.video-author {
+  /* make element take up so much space as needed
+  doesnt break line 
+  displayed next to other element
+  display: inline-block;
+  */
+  font-size: 12px;
+  color: rgb(96, 96, 96);
+  margin-bottom: 4px;
+}
+
+.video-author-link {
+  text-decoration: none;
+  color: rgb(96, 96, 96);
+}
+
+.video-stats {
+  font-size: 12px;
+  color: rgb(96, 96, 96);
+}
+
+@media (min-width: 1000px) {
+  .video-stats,
+  .video-author,
+  .channel-subs,
+  .video-time
+
+   {
+    font-size: 14px !important;
+  }
+}

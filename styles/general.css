@@ -1,0 +1,38 @@
+/* body has defult margin on all sides */
+/* add margin top to so header dont eclipse other elements */
+body {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding-top: 80px;
+  padding-left: 96px;
+  padding-right: 24px;
+  height: 1800px;
+  background-color: rgb(248, 248, 248);
+}
+
+p {
+ /* font-family: Roboto, Arial, Helvetica, sans-serif; */
+  margin: 0;
+}
+
+footer {
+  height: 200px;
+  background-color: white;
+  margin-right: -24px;
+  margin-left: -24px;
+}
+
+/* this didnt work 
+@media (min-width: 1000px) {
+  body {
+    font-size: 14px !important;
+  }
+}
+*/
+
+/*(sidebar) 186 - 72 = 114 + 96 = 210*/
+@media (min-width: 1200px) {
+  body {
+    padding-left: 210px;
+  }
+}
